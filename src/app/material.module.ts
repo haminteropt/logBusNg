@@ -2,6 +2,7 @@
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import {  } from '@angular/platform-browser/animations';
 import {
     MatNativeDateModule, MatSelectModule, MatSlideToggleModule,
     MatTabsModule, MatProgressSpinnerModule, MatRadioModule,
@@ -9,9 +10,11 @@ import {
     MatAutocompleteModule, MatToolbarModule, MatIconModule, MatMenuModule,
     MatCheckboxModule, MatButtonModule, MatStepperModule, MatDivider, MatDividerModule, MatCardActions
 } from '@angular/material';
+
 @NgModule({
     declarations: [],
     imports: [
+
         MatButtonModule,
         MatCheckboxModule,
         MatMenuModule,
@@ -31,12 +34,10 @@ import {
         MatStepperModule,
         MatDividerModule,
         MatButtonToggleModule
-        
     ],
     exports: [
         MatButtonModule,
         MatCheckboxModule,
-
         MatMenuModule,
         MatIconModule,
         MatToolbarModule,
@@ -54,7 +55,9 @@ import {
         MatStepperModule,
         MatDividerModule,
         MatButtonToggleModule
-    ]
+    ],
+
+    // providers: [BROWSER_ANIMATIONS_PROVIDERS],
 })
 
 export class MaterialModule { }

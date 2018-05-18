@@ -1,0 +1,52 @@
+.menu-list {
+    grid-area: menu-list;
+}
+// .fixedtop {
+//     position: fixed;
+//     top: 0px;
+//     left: 0px;
+//     z-index: 1500;
+
+// }
+// .menu {
+//     position: fixed;
+//     margin-top: 40px;
+//     z-index: 2000;
+//     top: 30px;
+// }
+.show-name {
+    grid-area: show-name;
+    justify-self: end;
+}
+.color {
+    background-color:#6D4C41;
+    color: white;
+}
+@media screen {
+    .scroll {
+        overflow: scroll;
+        margin-top: 64px;
+    }
+}
+.header-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%  !important;
+    }
+.wrapper {
+    display: grid;
+    grid-template-columns: 8fr, 1fr;
+    grid-template-areas: "menu-list show-name"; 
+}
+@media print {
+    .noprint {
+        display: none;
+    }
+
+    @page {
+        size: auto;
+        margin:0mm;
+    }
+}
