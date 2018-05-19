@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
+import { RigBusService } from './services/rigBus/rig-bus.service';
 const appRoutes: Routes = [
   // { path: "", component: LoginComponent },
   // { path: "**", component: PageNotFoundComponent }
@@ -20,6 +21,9 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule
+  ],
+  providers: [
+    RigBusService
   ],
   exports: [BrowserModule],
 
