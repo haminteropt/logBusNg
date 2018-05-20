@@ -6,24 +6,28 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
-import { RigBusService } from './services/rigBus/rig-bus.service';
+import { RigBusModule } from './rigBus/rig-bus/rig-bus.module';
+import { RigBusUIComponent } from './components/rig-bus-ui/rig-bus-ui.component';
+import { HttpClient } from '@angular/common/http';
 const appRoutes: Routes = [
   // { path: "", component: LoginComponent },
   // { path: "**", component: PageNotFoundComponent }
 ];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RigBusUIComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     BrowserAnimationsModule,
+    RigBusModule,
     MaterialModule
   ],
   providers: [
-    RigBusService
+    HttpClient
   ],
   exports: [BrowserModule],
 

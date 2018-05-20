@@ -1,20 +1,8 @@
 .menu-list {
     grid-area: menu-list;
 }
-// .fixedtop {
-//     position: fixed;
-//     top: 0px;
-//     left: 0px;
-//     z-index: 1500;
 
-// }
-// .menu {
-//     position: fixed;
-//     margin-top: 40px;
-//     z-index: 2000;
-//     top: 30px;
-// }
-.show-name {
+.version {
     grid-area: show-name;
     justify-self: end;
 }
@@ -39,6 +27,18 @@
     display: grid;
     grid-template-columns: 8fr, 1fr;
     grid-template-areas: "menu-list show-name"; 
+}
+.rig-card {
+    grid-area:  rig-card;
+}
+.log-card {
+    grid-area: log-card;
+}
+.loglayout {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: "rig-card  log-card"
 }
 @media print {
     .noprint {

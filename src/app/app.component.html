@@ -4,13 +4,11 @@
   <mat-toolbar class="wrapper color noprint header-toolbar">
 
     <div class="menu-list">
-      <button mat-button [matMenuTriggerFor]="showMenu">Show</button>
-      <button mat-button [matMenuTriggerFor]="classMenu">Class</button>
-      <button mat-button [matMenuTriggerFor]="adminMenu">Admin</button>
-      <button mat-button >About</button>
+      <button mat-button [matMenuTriggerFor]="showMenu">File</button>
+      <button mat-button>About</button>
 
     </div>
-    <div class="show-name"> Version: {{version}}</div>
+    <div class="version"> Version: {{version}}</div>
   </mat-toolbar>
   <div class="noprint">
     <mat-menu #appMenu="matMenu">
@@ -18,37 +16,23 @@
 
 
     <mat-menu class="menu" #showMenu="matMenu">
-      <button mat-menu-item disabled >Dup Classes from A to B</button>
-      <button mat-menu-item >Fees</button>
-      <button mat-menu-item >Check List</button>
-      <button mat-menu-item >Import Classes</button>
-      <button mat-menu-item >Income Report</button>
+
       <button disabled mat-menu-item>Settings</button>
       <button disabled mat-menu-item>Help</button>
-      <button mat-menu-item >About</button>
-    </mat-menu>
-
-
-
-    <mat-menu class="menu" #classMenu="matMenu">
-
-
-      <button mat-menu-item >USEF/USDF Data File</button>
-      <button mat-menu-item >AHA Data File</button>
-      <button mat-menu-item >Class Report</button>
-      <button mat-menu-item >Judges Spec Labels</button>
-
-      <!-- <button mat-menu-item (click)="menuButtonClick('/placeclass')">Place Classes</button> -->
-      <button disabled mat-menu-item >Prize Money Reprot</button>
-    </mat-menu>
-
-    <mat-menu class="menu" #adminMenu="matMenu">
-
-      <button disabled mat-menu-item >Sandbox</button>
-      <button disabled mat-menu-item >Repair Data</button>
+      <button mat-menu-item>About</button>
     </mat-menu>
   </div>
   <div class="scroll">
+    <div class="loglayout">
+      <mat-card class="rig-card">
+        <app-rig-bus-ui >
+
+        </app-rig-bus-ui>
+      </mat-card>
+      <mat-card class="log-card">
+        log card
+      </mat-card>
+    </div>
     <router-outlet></router-outlet>
   </div>
 </div>
